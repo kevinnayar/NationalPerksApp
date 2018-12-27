@@ -27,7 +27,6 @@ class Park extends Component {
         </View>
 
       </ScrollView>
-
     )
   }
 }

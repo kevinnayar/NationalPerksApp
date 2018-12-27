@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withNavigation } from 'react-navigation'
 import { array, bool } from 'prop-types'
 import { colors } from '../../assets/styles/defaults'
-import { ActivityIndicator, FlatList, Text, TouchableOpacity, View } from 'react-native'
+import { ActivityIndicator, FlatList, Text, View } from 'react-native'
 import DynamicImage from '../DynamicImage/DynamicImage'
 import styles from './ParkListStyles'
 
@@ -22,6 +22,7 @@ class ParkList extends Component {
       style={styles.item}
       onPress={() => this.handleItemPress(item)}
     >
+
       <View style={styles.image}>
         <DynamicImage id={item.id} />
       </View>

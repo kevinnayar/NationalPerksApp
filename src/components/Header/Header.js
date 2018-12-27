@@ -10,9 +10,11 @@ const Header = (props) => (
     onPress={() => props.navigation.navigate('parkList')}
     style={styles.header}
   >
+
     <View>
       <Text style={styles.headerText}>National Perks</Text>
     </View>
+
   </TouchableOpacity>
 )
 
