@@ -1,7 +1,7 @@
-import { buffer, height, headerHeight, mainHeight, width } from '../../assets/styles/defaults'
+import { height, headerHeight, mainHeight, width } from '../../assets/styles/defaults'
 import { StyleSheet } from 'react-native'
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   layout: {
     flex: 1,
     width,
@@ -14,5 +14,3 @@ const styles = StyleSheet.create({
     height: mainHeight,
   },
 })
-
-export default styles

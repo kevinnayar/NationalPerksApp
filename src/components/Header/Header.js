@@ -3,7 +3,7 @@ import { colors } from '../../assets/styles/defaults'
 import { Text, TouchableOpacity, View } from 'react-native'
 import styles from './HeaderStyles'
 
-const Header = () => (
+export default Header = () => (
   <TouchableOpacity
     activeOpacity={0.75}
     onPress={() => console.log('National Perks!')}
@@ -14,5 +14,3 @@ const Header = () => (
     </View>
   </TouchableOpacity>
 )
-
-export default Header

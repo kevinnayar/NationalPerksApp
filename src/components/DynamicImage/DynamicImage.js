@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { string } from 'prop-types'
-import { Image, StyleSheet } from 'react-native'
+import { Image } from 'react-native'
+import styles from './DynamicImageStyles'
 
 class DynamicImage extends Component {
   static propTypes = {
@@ -13,7 +14,7 @@ class DynamicImage extends Component {
     if (id === 'park_acadia') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/acadia.jpg')} />
       )
@@ -21,7 +22,7 @@ class DynamicImage extends Component {
     if (id === 'park_american-samoa') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/american-samoa.jpg')} />
       )
@@ -29,7 +30,7 @@ class DynamicImage extends Component {
     if (id === 'park_arches') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/arches.jpg')} />
       )
@@ -37,7 +38,7 @@ class DynamicImage extends Component {
     if (id === 'park_badlands') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/badlands.jpg')} />
       )
@@ -45,7 +46,7 @@ class DynamicImage extends Component {
     if (id === 'park_big-bend') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/big-bend.jpg')} />
       )
@@ -53,7 +54,7 @@ class DynamicImage extends Component {
     if (id === 'park_biscayne') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/biscayne.jpg')} />
       )
@@ -61,7 +62,7 @@ class DynamicImage extends Component {
     if (id === 'park_black-canyon-of-the-gunnison') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/black-canyon-of-the-gunnison.jpg')} />
       )
@@ -69,7 +70,7 @@ class DynamicImage extends Component {
     if (id === 'park_bryce-canyon') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/bryce-canyon.jpg')} />
       )
@@ -77,7 +78,7 @@ class DynamicImage extends Component {
     if (id === 'park_canyonlands') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/canyonlands.jpg')} />
       )
@@ -85,7 +86,7 @@ class DynamicImage extends Component {
     if (id === 'park_capitol-reef') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/capitol-reef.jpg')} />
       )
@@ -93,7 +94,7 @@ class DynamicImage extends Component {
     if (id === 'park_carlsbad-caverns') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/carlsbad-caverns.jpg')} />
       )
@@ -101,7 +102,7 @@ class DynamicImage extends Component {
     if (id === 'park_channel-islands') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/channel-islands.jpg')} />
       )
@@ -109,7 +110,7 @@ class DynamicImage extends Component {
     if (id === 'park_congaree') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/congaree.jpg')} />
       )
@@ -117,7 +118,7 @@ class DynamicImage extends Component {
     if (id === 'park_crater-lake') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/crater-lake.jpg')} />
       )
@@ -125,7 +126,7 @@ class DynamicImage extends Component {
     if (id === 'park_cuyahoga-valley') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/cuyahoga-valley.jpg')} />
       )
@@ -133,7 +134,7 @@ class DynamicImage extends Component {
     if (id === 'park_death-valley') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/death-valley.jpg')} />
       )
@@ -141,7 +142,7 @@ class DynamicImage extends Component {
     if (id === 'park_denali') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/denali.jpg')} />
       )
@@ -149,7 +150,7 @@ class DynamicImage extends Component {
     if (id === 'park_dry-tortugas') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/dry-tortugas.jpg')} />
       )
@@ -157,7 +158,7 @@ class DynamicImage extends Component {
     if (id === 'park_everglades') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/everglades.jpg')} />
       )
@@ -165,7 +166,7 @@ class DynamicImage extends Component {
     if (id === 'park_gates-of-the-arctic') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/gates-of-the-arctic.jpg')} />
       )
@@ -173,7 +174,7 @@ class DynamicImage extends Component {
     if (id === 'park_glacier') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/glacier.jpg')} />
       )
@@ -181,7 +182,7 @@ class DynamicImage extends Component {
     if (id === 'park_glacier-bay') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/glacier-bay.jpg')} />
       )
@@ -189,7 +190,7 @@ class DynamicImage extends Component {
     if (id === 'park_grand-canyon') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/grand-canyon.jpg')} />
       )
@@ -197,7 +198,7 @@ class DynamicImage extends Component {
     if (id === 'park_grand-teton') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/grand-teton.jpg')} />
       )
@@ -205,7 +206,7 @@ class DynamicImage extends Component {
     if (id === 'park_great-basin') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/great-basin.jpg')} />
       )
@@ -213,7 +214,7 @@ class DynamicImage extends Component {
     if (id === 'park_great-sand-dunes') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/great-sand-dunes.jpg')} />
       )
@@ -221,7 +222,7 @@ class DynamicImage extends Component {
     if (id === 'park_great-smoky-mountains') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/great-smoky-mountains.jpg')} />
       )
@@ -229,7 +230,7 @@ class DynamicImage extends Component {
     if (id === 'park_guadalupe-mountains') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/guadalupe-mountains.jpg')} />
       )
@@ -237,7 +238,7 @@ class DynamicImage extends Component {
     if (id === 'park_haleakala') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/haleakala.jpg')} />
       )
@@ -245,7 +246,7 @@ class DynamicImage extends Component {
     if (id === 'park_hawaii-volcanoes') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/hawaii-volcanoes.jpg')} />
       )
@@ -253,7 +254,7 @@ class DynamicImage extends Component {
     if (id === 'park_hot-springs') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/hot-springs.jpg')} />
       )
@@ -261,7 +262,7 @@ class DynamicImage extends Component {
     if (id === 'park_isle-royale') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/isle-royale.jpg')} />
       )
@@ -269,7 +270,7 @@ class DynamicImage extends Component {
     if (id === 'park_joshua-tree') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/joshua-tree.jpg')} />
       )
@@ -277,7 +278,7 @@ class DynamicImage extends Component {
     if (id === 'park_katmai') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/katmai.jpg')} />
       )
@@ -285,7 +286,7 @@ class DynamicImage extends Component {
     if (id === 'park_kenai-fjords') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/kenai-fjords.jpg')} />
       )
@@ -293,7 +294,7 @@ class DynamicImage extends Component {
     if (id === 'park_kings-canyon') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/kings-canyon.jpg')} />
       )
@@ -301,7 +302,7 @@ class DynamicImage extends Component {
     if (id === 'park_kobuk-valley') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/kobuk-valley.jpg')} />
       )
@@ -309,7 +310,7 @@ class DynamicImage extends Component {
     if (id === 'park_lake-clark') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/lake-clark.jpg')} />
       )
@@ -317,7 +318,7 @@ class DynamicImage extends Component {
     if (id === 'park_lassen-volcanic') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/lassen-volcanic.jpg')} />
       )
@@ -325,7 +326,7 @@ class DynamicImage extends Component {
     if (id === 'park_mammoth-cave') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/mammoth-cave.jpg')} />
       )
@@ -333,7 +334,7 @@ class DynamicImage extends Component {
     if (id === 'park_mesa-verde') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/mesa-verde.jpg')} />
       )
@@ -341,7 +342,7 @@ class DynamicImage extends Component {
     if (id === 'park_mount-rainier') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/mount-rainier.jpg')} />
       )
@@ -349,7 +350,7 @@ class DynamicImage extends Component {
     if (id === 'park_north-cascades') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/north-cascades.jpg')} />
       )
@@ -357,7 +358,7 @@ class DynamicImage extends Component {
     if (id === 'park_olympic') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/olympic.jpg')} />
       )
@@ -365,7 +366,7 @@ class DynamicImage extends Component {
     if (id === 'park_petrified-forest') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/petrified-forest.jpg')} />
       )
@@ -373,7 +374,7 @@ class DynamicImage extends Component {
     if (id === 'park_pinnacles') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/pinnacles.jpg')} />
       )
@@ -381,7 +382,7 @@ class DynamicImage extends Component {
     if (id === 'park_redwood') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/redwood.jpg')} />
       )
@@ -389,7 +390,7 @@ class DynamicImage extends Component {
     if (id === 'park_rocky-mountain') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/rocky-mountain.jpg')} />
       )
@@ -397,7 +398,7 @@ class DynamicImage extends Component {
     if (id === 'park_saguaro') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/saguaro.jpg')} />
       )
@@ -405,7 +406,7 @@ class DynamicImage extends Component {
     if (id === 'park_sequoia') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/sequoia.jpg')} />
       )
@@ -413,7 +414,7 @@ class DynamicImage extends Component {
     if (id === 'park_shenandoah') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/shenandoah.jpg')} />
       )
@@ -421,7 +422,7 @@ class DynamicImage extends Component {
     if (id === 'park_theodore-roosevelt') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/theodore-roosevelt.jpg')} />
       )
@@ -429,7 +430,7 @@ class DynamicImage extends Component {
     if (id === 'park_virgin-islands') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/virgin-islands.jpg')} />
       )
@@ -437,7 +438,7 @@ class DynamicImage extends Component {
     if (id === 'park_voyageurs') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/voyageurs.jpg')} />
       )
@@ -445,7 +446,7 @@ class DynamicImage extends Component {
     if (id === 'park_wind-cave') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/wind-cave.jpg')} />
       )
@@ -453,7 +454,7 @@ class DynamicImage extends Component {
     if (id === 'park_wrangell–st-elias') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/wrangell–st-elias.jpg')} />
       )
@@ -461,7 +462,7 @@ class DynamicImage extends Component {
     if (id === 'park_yellowstone') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/yellowstone.jpg')} />
       )
@@ -469,7 +470,7 @@ class DynamicImage extends Component {
     if (id === 'park_yosemite') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/yosemite.jpg')} />
       )
@@ -477,7 +478,7 @@ class DynamicImage extends Component {
     if (id === 'park_zion') {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/zion.jpg')} />
       )
@@ -485,7 +486,7 @@ class DynamicImage extends Component {
     else {
       return (
         <Image
-          resizeMode='contain'
+          resizeMode='cover'
           style={styles.image}
           source={require('../../assets/images/parks/zion.jpg')} />
       )
@@ -494,12 +495,3 @@ class DynamicImage extends Component {
 }
 
 export default DynamicImage
-
-const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    alignSelf: 'stretch',
-    width: undefined,
-    height: undefined,
-  },
-})

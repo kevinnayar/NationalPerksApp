@@ -1,19 +1,19 @@
-import { buffer, colors, fontSizes, headerHeight } from '../../assets/styles/defaults'
+import { buffer, colors, fontSizes, hairline, headerHeight } from '../../assets/styles/defaults'
 import { StyleSheet } from 'react-native'
 
-const styles = StyleSheet.create({
+export default StyleSheet.create({
   header: {
     flex: 1,
     backgroundColor: colors.white,
     paddingTop: buffer * 1.2,
     justifyContent: 'center',
+    borderBottomColor: colors.midGreen,
+    borderBottomWidth: hairline,
   },
   headerText: {
     marginLeft: buffer,
     color: colors.midGreen,
-    fontSize: fontSizes.title,
+    fontSize: fontSizes.xL,
     fontFamily: 'montserrat-black',
   },
 })
-
-export default styles

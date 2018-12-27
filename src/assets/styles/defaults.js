@@ -14,11 +14,11 @@ const colors = {
   darkBlue: '#012691',
 }
 const fontSizes = {
-  title: 18,
-  subTitle: 16,
-  pLarge: 14,
-  pMid: 12,
-  pSmall: 10,
+  xL: 18,
+  l: 16,
+  m: 14,
+  s: 12,
+  xS: 10,
 }
 const hairline = StyleSheet.hairlineWidth
 const { height, width } = Dimensions.get('window')
