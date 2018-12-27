@@ -1,0 +1,18 @@
+{
+  "sorter_name": {
+    "title": "Alphabetically",
+    "id": "sorter_name"
+  },
+  "sorter_park-size": {
+    "title": "Largest to Smallest",
+    "id": "sorter_park-size"
+  },
+  "sorter_annual-visitors": {
+    "title": "Most Visited",
+    "id": "sorter_annual-visitors"
+  },
+  "sorter_date-established": {
+    "title": "Oldest to Newest",
+    "id": "sorter_date-established"
+  }
+}
