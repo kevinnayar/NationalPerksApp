@@ -28,7 +28,7 @@ export default class App extends Component {
   async loadAssetsAsync() {
     const imageAssets = cacheImages([
       require('../assets/images/icon.png'),
-      require('../assets/images/splash.png'),
+      require('../assets/images/splash-gradient.png'),
       require('../assets/images/parks/acadia.jpg'),
       require('../assets/images/parks/american-samoa.jpg'),
       require('../assets/images/parks/arches.jpg'),

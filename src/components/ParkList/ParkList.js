@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { withNavigation } from 'react-navigation'
 import { array, bool } from 'prop-types'
 import { colors } from '../../assets/styles/defaults'
-import { ActivityIndicator, FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { ActivityIndicator, FlatList, Text, TouchableOpacity, View } from 'react-native'
 import DynamicImage from '../DynamicImage/DynamicImage'
 import styles from './ParkListStyles'
 
@@ -11,8 +12,8 @@ class ParkList extends Component {
     parks: array.isRequired,
   }
 
-  handleItemPress = (item) => {
-    console.log(item)
+  handleItemPress = (park) => {
+    this.props.navigation.navigate('park', { park })
   }
 
   renderItem = ({item}) => (
@@ -56,4 +57,4 @@ class ParkList extends Component {
   }
 }
 
-export default ParkList
+export default withNavigation(ParkList)

@@ -23,8 +23,7 @@ const fontSizes = {
 const hairline = StyleSheet.hairlineWidth
 const { height, width } = Dimensions.get('window')
 const headerHeight = height * .12
-const mainHeight = height * .80
-const navHeight = height * .08
+const mainHeight = height * .88
 
 module.exports = {
   buffer,
@@ -34,6 +33,5 @@ module.exports = {
   height,
   headerHeight,
   mainHeight,
-  navHeight,
   width,
 }

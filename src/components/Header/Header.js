@@ -1,12 +1,13 @@
 import React from 'react'
+import { withNavigation } from 'react-navigation'
 import { colors } from '../../assets/styles/defaults'
 import { Text, TouchableOpacity, View } from 'react-native'
 import styles from './HeaderStyles'
 
-export default Header = () => (
+const Header = (props) => (
   <TouchableOpacity
     activeOpacity={0.75}
-    onPress={() => console.log('National Perks!')}
+    onPress={() => props.navigation.navigate('parkList')}
     style={styles.header}
   >
     <View>
@@ -14,3 +15,5 @@ export default Header = () => (
     </View>
   </TouchableOpacity>
 )
+
+export default withNavigation(Header)

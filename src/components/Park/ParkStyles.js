@@ -2,42 +2,32 @@ import { buffer, colors, fontSizes, hairline, mainHeight, width } from '../../as
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-  activityIndicator: {
-    height: mainHeight,
-    justifyContent: 'center',
-  },
-  items: {
-    marginLeft: buffer,
-    marginRight: buffer,
-  },
-  item: {
-    justifyContent: 'center',
-    width,
-    height: buffer * 12,
-    marginTop: buffer,
+  park: {
   },
   image: {
     width,
-    height: buffer * 8,
+    height: buffer * 14,
   },
   text: {
-    backgroundColor: colors.white,
-    height: buffer * 4,
-    flex: 1,
+    margin: buffer,
   },
   titleText: {
-    marginTop: buffer,
-    marginBottom: buffer / 4,
-    marginLeft: buffer,
-    color: colors.darkBlue,
-    fontSize: fontSizes.l,
+    color: colors.white,
+    fontSize: fontSizes.xL,
     fontFamily: 'montserrat-black',
+    marginBottom: buffer / 4,
   },
   subTitleText: {
-    marginLeft: buffer,
-    color: colors.darkBlue,
+    color: colors.white,
     fontSize: fontSizes.xS,
     fontFamily: 'montserrat',
+    marginBottom: buffer,
+  },
+  descriptionText: {
+    color: colors.white,
+    fontSize: fontSizes.s,
+    fontFamily: 'montserrat',
+    lineHeight: fontSizes.xL,
   },
   states: {
     flex: 1,

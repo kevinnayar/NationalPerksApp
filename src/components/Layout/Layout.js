@@ -5,11 +5,11 @@ import { View } from 'react-native'
 import Header from '../Header/Header'
 import styles from './LayoutStyles'
 
-export default Layout = ({ children }) => (
+export default Layout = ({ children, navigate }) => (
   <View style={styles.layout}>
 
     <View style={styles.header}>
-      <Header />
+      <Header navigate={navigate} />
     </View>
 
     <LinearGradient
