@@ -31,6 +31,19 @@ export default StyleSheet.create({
     fontFamily: 'montserrat-black',
     marginBottom: buffer / 4,
   },
+  states: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+  },
+  stateText: {
+    color: colors.white,
+    fontSize: fontSizes.m,
+    fontFamily: 'montserrat',
+    marginBottom: buffer / 4,
+    width: 'auto',
+  },
   subTitleText: {
     color: colors.white,
     fontSize: fontSizes.xS,
@@ -51,6 +64,7 @@ export default StyleSheet.create({
     borderTopWidth: hairline,
     borderBottomColor: colors.white,
     borderBottomWidth: hairline,
+    marginBottom: buffer,
   },
   detailsItem: {
     width: '50%',
@@ -69,22 +83,5 @@ export default StyleSheet.create({
     fontSize: fontSizes.s,
     fontFamily: 'montserrat',
     marginBottom: buffer / 1.5,
-  },
-  states: {
-    flex: 1,
-    flexDirection: 'row',
-  },
-  state: {
-    backgroundColor: colors.lightGreen,
-    borderRadius: 2,
-    paddingTop: 3,
-    paddingBottom: 3,
-    paddingLeft: 6,
-    paddingRight: 6,
-    marginRight: 6,
-  },
-  stateTitle: {
-    color: colors.white,
-    fontSize: 10,
   },
 })
