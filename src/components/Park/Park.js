@@ -69,7 +69,3 @@ class Park extends Component {
 }
 
 export default Park
-
-/*
-<Text>{park.nps_link}</Text>
-*/

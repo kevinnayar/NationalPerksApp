@@ -17,7 +17,7 @@ export default StyleSheet.create({
     marginTop: buffer,
   },
   image: {
-    width,
+    width: width - (buffer * 2),
     height: buffer * 8,
   },
   text: {
