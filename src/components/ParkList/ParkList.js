@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withNavigation } from 'react-navigation'
 import { array, bool } from 'prop-types'
 import { colors } from '../../assets/styles/defaults'
-import { ActivityIndicator, FlatList, Text, View } from 'react-native'
+import { ActivityIndicator, FlatList, TouchableOpacity, Text, View } from 'react-native'
 import DynamicImage from '../DynamicImage/DynamicImage'
 import styles from './ParkListStyles'
 

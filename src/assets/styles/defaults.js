@@ -4,8 +4,8 @@ const buffer = 20
 const colors = {
   white: '#FFFFFF',
   black: '#000000',
-  whiteAlpha: 'rgba(255,255,255,0.7)',
-  blackAlpha: 'rgba(0,0,0,0.7)',
+  whiteAlpha: 'rgba(255,255,255,0.5)',
+  blackAlpha: 'rgba(0,0,0,0.5)',
   lightGreen: '#C4F6DB',
   midGreen: '#6BE0DD',
   darkGreen: '#09B5D6',
