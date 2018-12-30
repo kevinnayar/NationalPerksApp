@@ -4,12 +4,10 @@ import ParkList from '../../components/ParkList/ParkList'
 
 class ParkListContainer extends Component {
   render() {
-    const { isLoading, parks } = this.props
-
     return (
       <ParkList
-        isLoading={isLoading}
-        parks={parks}
+        isLoading={this.props.isLoading}
+        parks={this.props.parks}
       />
     )
   }

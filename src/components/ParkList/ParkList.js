@@ -45,7 +45,6 @@ class ParkList extends Component {
   }
 
   render() {
-    const { isLoading, parks } = this.props
     const animatedImageStyle = {
       opacity: this.animatedOpacity,
       transform: [
@@ -61,13 +60,13 @@ class ParkList extends Component {
 
     return (
       <View>
-        { isLoading ? (
+        { this.props.isLoading ? (
           <View style={styles.activityIndicator}>
             <ActivityIndicator size='large' color={colors.white} />
           </View>
         ) : (
           <FlatList
-            data={parks}
+            data={this.props.parks}
             keyExtractor={(item, index) => item.id}
             removeClippedSubviews={true}
             style={styles.items}

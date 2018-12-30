@@ -6,13 +6,12 @@ import FavoriteButton from './FavoriteButton'
 
 class FavoriteButtonContainer extends Component {
   render() {
-    const { actions, id, savedParks } = this.props
-
     return (
       <FavoriteButton
-        id={id}
-        saveOrUnsavePark={actions}
-        savedParks={savedParks} />
+        id={this.props.id}
+        saveOrUnsavePark={this.props.actions}
+        savedParks={this.props.savedParks}
+      />
     )
   }
 }

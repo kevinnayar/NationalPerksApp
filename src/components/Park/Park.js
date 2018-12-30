@@ -1,15 +1,31 @@
 import React, { Component } from 'react'
-import { object } from 'prop-types'
+import { array, object, shape, string } from 'prop-types'
 import { buffer, colors } from '../../assets/styles/defaults'
 import { Icon } from 'react-native-elements'
 import { Animated, FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { WebBrowser } from 'expo'
 import DynamicImage from '../DynamicImage/DynamicImage'
+import FavoriteButton from '../FavoriteButton/FavoriteButtonContainer'
 import styles from './ParkStyles'
 
 class Park extends Component {
   static propTypes = {
-    park: object.isRequired,
+    park: shape({
+      id: string,
+      image: shape({
+        attribution_url: string,
+        attribution: string,
+      }),
+      title: string,
+      states: array,
+      date_established_readable: string,
+      description: string,
+      area: shape({
+        acres: string,
+        square_m: string,
+      }),
+      visitors: string,
+    }),
   }
 
   handleLinkPress(url) {
@@ -55,7 +71,10 @@ class Park extends Component {
       <ScrollView contentContainerStyle={styles.park}>
 
         <Animated.View style={[ styles.image, animatedImageStyle ]}>
+
           <DynamicImage id={park.id} />
+          <FavoriteButton id={park.id} />
+
           <TouchableOpacity
             activeOpacity={0.75}
             style={styles.imageLink}
@@ -63,10 +82,13 @@ class Park extends Component {
           >
             <Text style={styles.imageLinkText}>Image source: {park.image.attribution}</Text>
           </TouchableOpacity>
+
         </Animated.View>
 
         <Animated.View style={[ styles.overview, animatedTextStyle ]}>
+
           <Text style={styles.titleText}>{park.title.toUpperCase()}</Text>
+
           <FlatList
             data={park.states}
             keyExtractor={(item, index) => item.id}
@@ -77,10 +99,12 @@ class Park extends Component {
               )
             }}
           />
+
           <Text style={styles.subTitleText}>{`Established ${park.date_established_readable}`}</Text>
           <Text style={styles.descriptionText}>{park.description}</Text>
 
           <View style={styles.details}>
+
             <View style={[ styles.detailsItem, styles.detailsItemOdd ]}>
               <Icon
                 containerStyle={styles.icon}
@@ -100,6 +124,7 @@ class Park extends Component {
               />
               <Text style={styles.detailsText}>{park.visitors} annual visitors</Text>
             </View>
+
           </View>
 
         </Animated.View>

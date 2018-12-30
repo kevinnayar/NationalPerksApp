@@ -5,9 +5,12 @@ import { buffer, colors } from '../../assets/styles/defaults'
 import styles from './FavoriteButtonStyles'
 
 class FavoriteButton extends Component {
+  handleButtonPress() {
+    this.props.saveOrUnsavePark(this.props.id)
+  }
+
   render() {
-    const { id, savedParks, saveOrUnsavePark } = this.props
-    const favorited = savedParks.includes(id)
+    const favorited = this.props.savedParks.includes(this.props.id)
 
     return (
       <View style={styles.favorite}>
@@ -20,7 +23,7 @@ class FavoriteButton extends Component {
             bottom: buffer,
             right: buffer,
           }}
-          onPress={() => saveOrUnsavePark(id)}
+          onPress={() => this.handleButtonPress()}
         >
 
           <Icon

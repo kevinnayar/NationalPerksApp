@@ -29,6 +29,9 @@ const tabNavigatorConfig = {
 
 const TabNavigator = createBottomTabNavigator(screenConfig, tabNavigatorConfig)
 const TabContainer = createAppContainer(TabNavigator)
-const ScreenContainer = ({ isLoading }) => <TabContainer screenProps={{ isLoading: isLoading }} />
+
+const ScreenContainer = ({ isLoading }) => (
+  <TabContainer screenProps={{ isLoading: isLoading }} />
+)
 
 export default ScreenContainer

@@ -5,7 +5,7 @@ import {
 
 const initialState = {
   parks: [],
-  savedParks: ['park_acadia', 'park_arches'],
+  savedParks: [],
 }
 
 const reducer = (state = initialState, action) => {
