@@ -9,3 +9,13 @@ export function fetchParks() {
     })
   }
 }
+
+export const SAVE_OR_UNSAVE_PARK = 'SAVE_OR_UNSAVE_PARK'
+export function saveOrUnsavePark(id) {
+  return (dispatch) => {
+    return dispatch({
+      type: SAVE_OR_UNSAVE_PARK,
+      payload: id,
+    })
+  }
+}

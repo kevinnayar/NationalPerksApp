@@ -4,7 +4,7 @@ import { array, bool } from 'prop-types'
 import { buffer, colors } from '../../assets/styles/defaults'
 import { ActivityIndicator, Animated, FlatList, TouchableOpacity, Text, View } from 'react-native'
 import DynamicImage from '../DynamicImage/DynamicImage'
-import FavoriteButton from '../FavoriteButton/FavoriteButton'
+import FavoriteButton from '../FavoriteButton/FavoriteButtonContainer'
 import styles from './ParkListStyles'
 
 class ParkList extends Component {
@@ -81,7 +81,7 @@ class ParkList extends Component {
 
                   <Animated.View style={[ styles.image, animatedImageStyle ]}>
                     <DynamicImage id={item.id} />
-                    <FavoriteButton item={item} />
+                    <FavoriteButton id={item.id} />
                   </Animated.View>
 
                   <Animated.View style={[ styles.text, animatedTextStyle ]}>

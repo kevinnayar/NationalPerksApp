@@ -5,29 +5,10 @@ import { buffer, colors } from '../../assets/styles/defaults'
 import styles from './FavoriteButtonStyles'
 
 class FavoriteButton extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      favorited: false,
-    }
-  }
-
-  handleButtonPress = (item) => {
-    if (!this.state.favorited) {
-      Alert.alert(`You favorited ${item.title} National Park!`)
-    }
-    else {
-      Alert.alert(`You removed ${item.title} National Park from your favorites`)
-    }
-
-    this.setState({
-      ...this.state,
-      favorited: !this.state.favorited,
-    })
-  }
-
   render() {
+    const { id, savedParks, saveOrUnsavePark } = this.props
+    const favorited = savedParks.includes(id)
+
     return (
       <View style={styles.favorite}>
 
@@ -39,13 +20,15 @@ class FavoriteButton extends Component {
             bottom: buffer,
             right: buffer,
           }}
-          onPress={() => this.handleButtonPress(this.props.item)}
+          onPress={() => saveOrUnsavePark(id)}
         >
+
           <Icon
-            name={`${this.state.favorited ? 'favorite' : 'favorite-border'}`}
+            name={`${favorited ? 'favorite' : 'favorite-border'}`}
             size={buffer}
             color={colors.white}
           />
+
         </TouchableOpacity>
 
       </View>
