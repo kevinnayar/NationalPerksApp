@@ -10,10 +10,20 @@ export default StyleSheet.create({
     borderBottomColor: colors.midGreen,
     borderBottomWidth: hairline,
   },
+  backButton: {
+    position: 'absolute',
+    left: buffer,
+    top: buffer * 2.25,
+    width: buffer * 1.5,
+    height: buffer * 1.5,
+  },
   headerText: {
     marginLeft: buffer,
     color: colors.midGreen,
     fontSize: fontSizes.xL,
     fontFamily: 'montserrat-black',
+  },
+  headerTextWithBack: {
+    marginLeft: buffer * 3,
   },
 })

@@ -17,7 +17,7 @@ class ScreensContainer extends Component {
   componentDidMount() {
     Promise.all([
       this.props.fetchParks(),
-      //this.props.fetchSavedParks(),
+      this.props.fetchSavedParks(),
     ]).then(() => {
       this.setState({ isLoading: false })
     })

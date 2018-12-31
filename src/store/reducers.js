@@ -1,4 +1,4 @@
-//import { getValue, setValue } from '../util/asyncStorageApi'
+import { setValue } from '../util/asyncStorageApi'
 import { FETCH_PARKS, FETCH_SAVED_PARKS, SAVE_OR_UNSAVE_PARK } from './actions'
 
 const initialState = {
@@ -41,7 +41,7 @@ const reducer = (state = initialState, action) => {
         }
       }
 
-      //setValue('savedParks', state.savedParks)
+      setValue('savedParks', state.savedParks)
       return state
     }
 

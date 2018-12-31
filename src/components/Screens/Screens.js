@@ -7,7 +7,7 @@ import Park from '../Park/Park'
 
 const ParkListScreen = ({ screenProps: { isLoading } }) => {
   return (
-    <Layout>
+    <Layout title={'National Perks'} backButton={false}>
       <ParkList isLoading={isLoading} />
     </Layout>
   )
@@ -21,7 +21,7 @@ ParkListScreen.propTypes = {
 
 const ParkScreen = ({ navigation: { getParam } }) => {
   return (
-    <Layout>
+    <Layout title={'National Perks'} backButton={true}>
       <Park park={getParam('park')} />
     </Layout>
   )

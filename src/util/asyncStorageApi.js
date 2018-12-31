@@ -2,7 +2,7 @@ import { AsyncStorage } from 'react-native'
 
 async function getValue(key) {
   return await AsyncStorage.getItem(key).then((value) => {
-    return JSON.parse(value)
+    return value
   })
 }
 

@@ -16,17 +16,26 @@ export const FETCH_SAVED_PARKS = 'FETCH_SAVED_PARKS'
 
 export function fetchSavedParks() {
   return (dispatch) => {
-    let savedParks = getValue('savedParks')
-    if (savedParks === undefined) {
-      savedParks = []
-    }
-
-    return dispatch({
-      type: FETCH_SAVED_PARKS,
-      payload: savedParks,
+    getValue('savedParks')
+      .then(response => {
+        if (response && response.length) {
+          return dispatch({
+            type: FETCH_SAVED_PARKS,
+            payload: JSON.parse(response),
+          })
+        }
+        else {
+          return dispatch({
+            type: FETCH_SAVED_PARKS,
+            payload: [],
+          })
+        }
     })
   }
 }
+
+
+
 
 export const SAVE_OR_UNSAVE_PARK = 'SAVE_OR_UNSAVE_PARK'
 
