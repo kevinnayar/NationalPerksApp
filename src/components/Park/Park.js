@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { array, shape, string } from 'prop-types'
+import { array, bool, object, shape, string } from 'prop-types'
 import { buffer, colors } from '../../assets/styles/defaults'
 import { Icon } from 'react-native-elements'
 import { Animated, FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
@@ -10,6 +10,9 @@ import styles from './ParkStyles'
 
 class Park extends Component {
   static propTypes = {
+    isLoading: bool.isRequired,
+    npsParkData: object,
+    npsParkArticles: array,
     park: shape({
       id: string,
       image: shape({
@@ -99,7 +102,7 @@ class Park extends Component {
             }}
           />
 
-          <Text style={styles.subTitleText}>{`Established ${park.date_established_readable}`}</Text>
+          <Text style={styles.dateText}>{`Established ${park.date_established_readable}`}</Text>
           <Text style={styles.descriptionText}>{park.description}</Text>
 
           <View style={styles.details}>
@@ -125,6 +128,34 @@ class Park extends Component {
             </View>
 
           </View>
+
+          {this.props.npsParkData && (
+            <View>
+              <Text style={styles.descriptionText}>{this.props.npsParkData.description}</Text>
+              <Text style={styles.subTitleText}>Weather Info</Text>
+              <Text style={styles.descriptionText}>{this.props.npsParkData.weatherInfo}</Text>
+            </View>
+          )}
+
+          {this.props.npsParkArticles && (
+            <View>
+              <Text style={styles.subTitleText}>Articles</Text>
+              <FlatList
+                data={this.props.npsParkArticles}
+                keyExtractor={(item) => item.title}
+                renderItem={({ item }) => {
+                  return (
+                    <TouchableOpacity
+                      activeOpacity={0.75}
+                      onPress={() => this.handleLinkPress(item.url)}
+                    >
+                      <Text style={styles.descriptionText}>{item.title}</Text>
+                    </TouchableOpacity>
+                  )
+                }}
+              />
+            </View>
+          )}
 
         </Animated.View>
 

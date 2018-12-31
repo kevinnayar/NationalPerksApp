@@ -15,12 +15,4 @@
     "comma-dangle": ["error", "always-multiline"],
     "no-console": "off",
   },
-  "overrides": [
-    {
-      "files": ["*Container.js"],
-      "rules": {
-        "react/prop-types": false
-      }
-    }
-  ],
 }

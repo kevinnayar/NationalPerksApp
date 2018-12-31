@@ -3,7 +3,7 @@ import { createBottomTabNavigator, createAppContainer } from 'react-navigation'
 import { bool, func, shape } from 'prop-types'
 import Layout from '../Layout/Layout'
 import ParkList from '../ParkList/ParkListContainer'
-import Park from '../Park/Park'
+import Park from '../Park/ParkContainer'
 import SavedParkList from '../SavedParkList/SavedParkListContainer'
 
 const ParkListScreen = ({ screenProps: { isLoading } }) => {
@@ -56,7 +56,7 @@ const screenConfig = {
 
 const tabNavigatorConfig = {
   defaultNavigationOptions: () => ({
-    //tabBarVisible: false,
+    tabBarVisible: false,
   }),
 }
 

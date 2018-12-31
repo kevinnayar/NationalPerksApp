@@ -20,7 +20,7 @@ async function clearValue(key) {
   return await AsyncStorage.removeItem(key)
 }
 
-module.exports = {
+export {
   getValue,
   setValue,
   mergeValue,

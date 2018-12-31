@@ -42,7 +42,7 @@ export default StyleSheet.create({
     marginBottom: buffer / 4,
     width: 'auto',
   },
-  subTitleText: {
+  dateText: {
     color: colors.white,
     fontSize: fontSizes.xS,
     fontFamily: 'montserrat',
@@ -81,5 +81,12 @@ export default StyleSheet.create({
     fontSize: fontSizes.s,
     fontFamily: 'montserrat',
     marginBottom: buffer / 1.5,
+  },
+  subTitleText: {
+    color: colors.white,
+    fontSize: fontSizes.m,
+    fontFamily: 'montserrat-black',
+    marginTop: buffer / 2,
+    marginBottom: buffer / 2,
   },
 })

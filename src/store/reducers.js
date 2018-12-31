@@ -1,5 +1,11 @@
 import { setValue } from '../util/asyncStorageApi'
-import { FETCH_PARKS, FETCH_SAVED_PARKS, SAVE_OR_UNSAVE_PARK } from './actions'
+import {
+  FETCH_PARKS,
+  FETCH_NPS_PARK_DATA,
+  FETCH_NPS_PARK_ARTICLES,
+  FETCH_SAVED_PARKS,
+  SAVE_OR_UNSAVE_PARK,
+} from './actions'
 
 const initialState = {
   parks: [],
@@ -13,6 +19,22 @@ const reducer = (state = initialState, action) => {
       state = {
         ...state,
         parks: action.payload,
+      }
+      return state
+    }
+
+    case FETCH_NPS_PARK_DATA: {
+      state = {
+        ...state,
+        npsParkData: action.payload[0],
+      }
+      return state
+    }
+
+    case FETCH_NPS_PARK_ARTICLES: {
+      state = {
+        ...state,
+        npsParkArticles: action.payload,
       }
       return state
     }
