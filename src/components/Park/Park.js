@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { array, object, shape, string } from 'prop-types'
+import { array, shape, string } from 'prop-types'
 import { buffer, colors } from '../../assets/styles/defaults'
 import { Icon } from 'react-native-elements'
 import { Animated, FlatList, ScrollView, Text, TouchableOpacity, View } from 'react-native'
@@ -22,10 +22,9 @@ class Park extends Component {
       description: string,
       area: shape({
         acres: string,
-        square_m: string,
       }),
       visitors: string,
-    }),
+    }).isRequired,
   }
 
   handleLinkPress(url) {
@@ -37,22 +36,22 @@ class Park extends Component {
 
     this.animatedOpacityImage = new Animated.Value(0.5)
     this.animatedOpacityText = new Animated.Value(0.5)
-    this.animatedTextUp = new Animated.Value(buffer * 3)
+    this.animatedTextUp = new Animated.Value(buffer * 4)
 
     Animated.parallel([
       Animated.timing(this.animatedOpacityImage, {
         toValue: 1,
-        duration: 300,
+        duration: 250,
         useNativeDriver: true,
       }),
       Animated.timing(this.animatedOpacityText, {
         toValue: 1,
-        duration: 150,
+        duration: 250,
         useNativeDriver: true,
       }),
       Animated.timing(this.animatedTextUp, {
         toValue: 0,
-        duration: 300,
+        duration: 250,
         useNativeDriver: true,
       }),
     ]).start()
@@ -91,7 +90,7 @@ class Park extends Component {
 
           <FlatList
             data={park.states}
-            keyExtractor={(item, index) => item.id}
+            keyExtractor={(item) => item.id}
             style={styles.state}
             renderItem={({item, index}) => {
               return (

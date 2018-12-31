@@ -1,20 +1,37 @@
 import React from 'react'
 import { createBottomTabNavigator, createAppContainer } from 'react-navigation'
+import { bool, func, shape } from 'prop-types'
 import Layout from '../Layout/Layout'
 import ParkList from '../ParkList/ParkListContainer'
 import Park from '../Park/Park'
 
-const ParkListScreen = ({ screenProps: { isLoading } }) => (
-  <Layout>
-    <ParkList isLoading={isLoading} />
-  </Layout>
-)
+const ParkListScreen = ({ screenProps: { isLoading } }) => {
+  return (
+    <Layout>
+      <ParkList isLoading={isLoading} />
+    </Layout>
+  )
+}
 
-const ParkScreen = ({ navigation: { getParam } }) => (
-  <Layout>
-    <Park park={getParam('park')} />
-  </Layout>
-)
+ParkListScreen.propTypes = {
+  screenProps: shape({
+    isLoading: bool.isRequired,
+  }),
+}
+
+const ParkScreen = ({ navigation: { getParam } }) => {
+  return (
+    <Layout>
+      <Park park={getParam('park')} />
+    </Layout>
+  )
+}
+
+ParkScreen.propTypes = {
+  navigation: shape({
+    getParam: func.isRequired,
+  }),
+}
 
 const screenConfig = {
   parkList: { screen: ParkListScreen },
@@ -22,16 +39,23 @@ const screenConfig = {
 }
 
 const tabNavigatorConfig = {
-  defaultNavigationOptions: ({ navigation }) => ({
+  defaultNavigationOptions: () => ({
     tabBarVisible: false,
   }),
 }
 
 const TabNavigator = createBottomTabNavigator(screenConfig, tabNavigatorConfig)
+
 const TabContainer = createAppContainer(TabNavigator)
 
-const ScreenContainer = ({ isLoading }) => (
-  <TabContainer screenProps={{ isLoading: isLoading }} />
-)
+const ScreensContainer = ({ isLoading }) => {
+  return (
+    <TabContainer screenProps={{ isLoading: isLoading }} />
+  )
+}
 
-export default ScreenContainer
+ScreensContainer.propTypes = {
+  isLoading: bool.isRequired,
+}
+
+export default ScreensContainer

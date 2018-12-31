@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import { func } from 'prop-types'
 import { saveOrUnsavePark } from '../../store/actions'
 import FavoriteButton from './FavoriteButton'
 
 class FavoriteButtonContainer extends Component {
+  static propTypes = {
+    saveOrUnsavePark: func.isRequired,
+  }
+
   render() {
     return (
       <FavoriteButton
         id={this.props.id}
-        saveOrUnsavePark={this.props.actions}
         savedParks={this.props.savedParks}
+        saveOrUnsavePark={this.props.saveOrUnsavePark}
       />
     )
   }
@@ -24,7 +29,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(saveOrUnsavePark, dispatch),
+    saveOrUnsavePark: bindActionCreators(saveOrUnsavePark, dispatch),
   }
 }
 

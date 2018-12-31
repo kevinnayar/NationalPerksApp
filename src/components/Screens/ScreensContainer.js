@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { func } from 'prop-types'
 import { fetchParks } from '../../store/actions'
 import Screens from './Screens'
 
 class ScreensContainer extends Component {
+  static propTypes = {
+    fetchParks: func.isRequired,
+  }
+
   state = {
-    isLoading: true
+    isLoading: true,
   }
 
   componentDidMount() {
@@ -17,16 +22,9 @@ class ScreensContainer extends Component {
     return (
       <Screens
         isLoading={this.state.isLoading}
-        parks={this.props.parks}
       />
     )
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    parks: state.parks,
-  }
-}
-
-export default connect(mapStateToProps, { fetchParks })(ScreensContainer)
+export default connect(null, { fetchParks })(ScreensContainer)

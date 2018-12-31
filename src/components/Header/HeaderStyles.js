@@ -1,4 +1,4 @@
-import { buffer, colors, fontSizes, hairline, headerHeight } from '../../assets/styles/defaults'
+import { buffer, colors, fontSizes, hairline } from '../../assets/styles/defaults'
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({

@@ -25,16 +25,15 @@ const reducer = (state = initialState, action) => {
       if (!state.savedParks.includes(id)) {
         state = {
           ...state,
-          savedParks: [ ...state.savedParks, id ]
+          savedParks: [ ...state.savedParks, id ],
         }
       }
       else {
         state = {
           ...state,
-          savedParks: state.savedParks.filter(savedPark => savedPark !== id)
+          savedParks: state.savedParks.filter(savedPark => savedPark !== id),
         }
       }
-
       return state
     }
 

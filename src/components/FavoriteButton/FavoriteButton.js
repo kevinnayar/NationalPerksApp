@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
-import { Alert, TouchableOpacity, View } from 'react-native'
-import { Icon } from 'react-native-elements'
 import { buffer, colors } from '../../assets/styles/defaults'
+import { array, func, string } from 'prop-types'
+import { TouchableOpacity, View } from 'react-native'
+import { Icon } from 'react-native-elements'
 import styles from './FavoriteButtonStyles'
 
 class FavoriteButton extends Component {
-  handleButtonPress() {
+  static propTypes = {
+    id: string.isRequired,
+    savedParks: array.isRequired,
+    saveOrUnsavePark: func.isRequired,
+  }
+
+  handleButtonPress = () => {
     this.props.saveOrUnsavePark(this.props.id)
   }
 
@@ -23,7 +30,7 @@ class FavoriteButton extends Component {
             bottom: buffer,
             right: buffer,
           }}
-          onPress={() => this.handleButtonPress()}
+          onPress={this.handleButtonPress}
         >
 
           <Icon

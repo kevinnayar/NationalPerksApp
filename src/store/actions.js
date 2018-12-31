@@ -1,6 +1,7 @@
 import parks from '../data/parks.json'
 
 export const FETCH_PARKS = 'FETCH_PARKS'
+
 export function fetchParks() {
   return (dispatch) => {
     return dispatch({
@@ -11,6 +12,7 @@ export function fetchParks() {
 }
 
 export const SAVE_OR_UNSAVE_PARK = 'SAVE_OR_UNSAVE_PARK'
+
 export function saveOrUnsavePark(id) {
   return (dispatch) => {
     return dispatch({

@@ -97,9 +97,6 @@ export default class App extends Component {
       {
         'montserrat-black': require('../assets/fonts/Montserrat-Black.ttf'),
       },
-      {
-        'rozha-one': require('../assets/fonts/RozhaOne-Regular.ttf'),
-      },
     ])
 
     await Promise.all([ ...imageAssets, ...fontAssets ])
@@ -111,7 +108,8 @@ export default class App extends Component {
         <AppLoading
           startAsync={this.loadAssetsAsync}
           onFinish={() => this.setState({ isReady: true })}
-          onError={console.warn} />
+          onError={console.warn}
+        />
       )
     }
     return (
