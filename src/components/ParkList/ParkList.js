@@ -75,7 +75,7 @@ class ParkList extends Component {
 
   renderListEmptyComponent(text) {
     return (
-      <View style={styles.emptyContainer}>
+      <View>
         <Text>{text}</Text>
       </View>
     )
