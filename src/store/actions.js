@@ -34,9 +34,6 @@ export function fetchSavedParks() {
   }
 }
 
-
-
-
 export const SAVE_OR_UNSAVE_PARK = 'SAVE_OR_UNSAVE_PARK'
 
 export function saveOrUnsavePark(id) {

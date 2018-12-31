@@ -56,4 +56,10 @@ export default StyleSheet.create({
     color: colors.white,
     fontSize: 10,
   },
+  emptyContainer: {
+
+  },
+  footerContainer: {
+    height: buffer * 3.5,
+  },
 })

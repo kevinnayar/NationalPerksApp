@@ -4,6 +4,7 @@ import { bool, func, shape } from 'prop-types'
 import Layout from '../Layout/Layout'
 import ParkList from '../ParkList/ParkListContainer'
 import Park from '../Park/Park'
+import SavedParkList from '../SavedParkList/SavedParkListContainer'
 
 const ParkListScreen = ({ screenProps: { isLoading } }) => {
   return (
@@ -33,14 +34,29 @@ ParkScreen.propTypes = {
   }),
 }
 
+const SavedParkListScreen = ({ screenProps: { isLoading } }) => {
+  return (
+    <Layout title={'Saved Parks'} backButton={true}>
+      <SavedParkList isLoading={isLoading} />
+    </Layout>
+  )
+}
+
+SavedParkListScreen.propTypes = {
+  screenProps: shape({
+    isLoading: bool.isRequired,
+  }),
+}
+
 const screenConfig = {
   parkList: { screen: ParkListScreen },
   park: { screen: ParkScreen },
+  savedParkList: { screen: SavedParkListScreen },
 }
 
 const tabNavigatorConfig = {
   defaultNavigationOptions: () => ({
-    tabBarVisible: false,
+    //tabBarVisible: false,
   }),
 }
 

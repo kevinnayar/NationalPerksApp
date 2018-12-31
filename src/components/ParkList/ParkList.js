@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withNavigation } from 'react-navigation'
-import { array, bool, object } from 'prop-types'
+import { array, bool, object, string } from 'prop-types'
 import { buffer, colors } from '../../assets/styles/defaults'
 import { ActivityIndicator, Animated, FlatList, TouchableOpacity, Text, View } from 'react-native'
 import DynamicImage from '../DynamicImage/DynamicImage'
@@ -9,6 +9,7 @@ import styles from './ParkListStyles'
 
 class ParkList extends Component {
   static propTypes = {
+    emptyContainerText: string,
     isLoading: bool.isRequired,
     navigation: object.isRequired,
     parks: array.isRequired,
@@ -72,6 +73,21 @@ class ParkList extends Component {
     )
   }
 
+  renderListEmptyComponent(text) {
+    return (
+      <View style={styles.emptyContainer}>
+        <Text>{text}</Text>
+      </View>
+    )
+  }
+
+  renderListFooterComponent() {
+    return (
+      <View style={styles.footerContainer}>
+      </View>
+    )
+  }
+
   render() {
     return (
       <View>
@@ -86,6 +102,8 @@ class ParkList extends Component {
             removeClippedSubviews={true}
             style={styles.items}
             renderItem={this.renderItem}
+            ListEmptyComponent={this.renderListEmptyComponent(this.props.emptyContainerText)}
+            ListFooterComponent={this.renderListFooterComponent}
           />
         )}
       </View>
