@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { func } from 'prop-types'
-import { fetchParks } from '../../store/actions'
+import { fetchParks, fetchSavedParks } from '../../store/actions'
 import Screens from './Screens'
 
 class ScreensContainer extends Component {
   static propTypes = {
     fetchParks: func.isRequired,
+    fetchSavedParks: func.isRequired,
   }
 
   state = {
@@ -14,8 +15,12 @@ class ScreensContainer extends Component {
   }
 
   componentDidMount() {
-    Promise.resolve(this.props.fetchParks())
-      .then(() => this.setState({ isLoading: false }))
+    Promise.all([
+      this.props.fetchParks(),
+      //this.props.fetchSavedParks(),
+    ]).then(() => {
+      this.setState({ isLoading: false })
+    })
   }
 
   render() {
@@ -27,4 +32,4 @@ class ScreensContainer extends Component {
   }
 }
 
-export default connect(null, { fetchParks })(ScreensContainer)
+export default connect(null, { fetchParks, fetchSavedParks })(ScreensContainer)

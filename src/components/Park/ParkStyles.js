@@ -2,8 +2,6 @@ import { buffer, colors, fontSizes, hairline, width } from '../../assets/styles/
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-  park: {
-  },
   image: {
     width,
     height: buffer * 14,

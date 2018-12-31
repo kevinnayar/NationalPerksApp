@@ -1,7 +1,5 @@
-import {
-  FETCH_PARKS,
-  SAVE_OR_UNSAVE_PARK,
-} from './actions'
+//import { getValue, setValue } from '../util/asyncStorageApi'
+import { FETCH_PARKS, FETCH_SAVED_PARKS, SAVE_OR_UNSAVE_PARK } from './actions'
 
 const initialState = {
   parks: [],
@@ -15,6 +13,14 @@ const reducer = (state = initialState, action) => {
       state = {
         ...state,
         parks: action.payload,
+      }
+      return state
+    }
+
+    case FETCH_SAVED_PARKS: {
+      state = {
+        ...state,
+        savedParks: action.payload,
       }
       return state
     }
@@ -34,6 +40,8 @@ const reducer = (state = initialState, action) => {
           savedParks: state.savedParks.filter(savedPark => savedPark !== id),
         }
       }
+
+      //setValue('savedParks', state.savedParks)
       return state
     }
 

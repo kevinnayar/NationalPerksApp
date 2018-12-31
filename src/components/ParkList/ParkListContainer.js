@@ -4,6 +4,7 @@ import ParkList from '../../components/ParkList/ParkList'
 
 class ParkListContainer extends Component {
   render() {
+    console.log(this.props.savedParks)
     return (
       <ParkList
         isLoading={this.props.isLoading}
@@ -16,6 +17,7 @@ class ParkListContainer extends Component {
 function mapStateToProps(state) {
   return {
     parks: state.parks,
+    savedParks: state.savedParks,
   }
 }
 

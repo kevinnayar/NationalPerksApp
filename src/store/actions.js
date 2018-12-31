@@ -1,4 +1,5 @@
 import parks from '../data/parks.json'
+import { getValue } from '../util/asyncStorageApi'
 
 export const FETCH_PARKS = 'FETCH_PARKS'
 
@@ -7,6 +8,22 @@ export function fetchParks() {
     return dispatch({
       type: FETCH_PARKS,
       payload: parks,
+    })
+  }
+}
+
+export const FETCH_SAVED_PARKS = 'FETCH_SAVED_PARKS'
+
+export function fetchSavedParks() {
+  return (dispatch) => {
+    let savedParks = getValue('savedParks')
+    if (savedParks === undefined) {
+      savedParks = []
+    }
+
+    return dispatch({
+      type: FETCH_SAVED_PARKS,
+      payload: savedParks,
     })
   }
 }
